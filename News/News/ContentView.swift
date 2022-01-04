@@ -144,7 +144,7 @@ class RemoteImageURL: ObservableObject {
       
         let request = URLRequest(url: url)
         URLSession.shared.dataTask(with: request) { data, response, error in
-            if let data = data, let response = response {
+            if let data = data, let _ = response {
                 DispatchQueue.main.async {
                     self.data = data
                 }
